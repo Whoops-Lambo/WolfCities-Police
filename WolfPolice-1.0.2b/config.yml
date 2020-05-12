@@ -1,0 +1,82 @@
+# #jail-time###
+# The time the player gets jailed for in minutes
+# Default value is 5
+# #arrested-sound###
+# If a sound should play when a player gets arrested
+# Default value is true
+# #police-radio-format###
+# </message> will send the original message. Example: Hello fellow Police Officers!
+# </l_message> will send a lower case version of the message. Example: hello fellow police officers!
+# </u_message> will send an upper case version of the message. Example: HELLO FELLOW POLICE OFFICERS!
+# #skinsrestorer-police-skins###
+# If you make this value true, then whenever a player goes on duty
+# their skin will be turned into a police officer skin
+# Default value is false
+# #skinsrestorer-skin-names###
+# If skinsrestorer-police-skins is true
+# then the player will get the skin of a random player
+# whose name is in the skinsrestorer-skin-names list
+# #simplejail-jailed-message###
+# If you make this value true
+# then jailed-by-player in messages will not be sent to the jailed player by this plugin
+options:
+   jail-time: 5
+   arrested-sound: true
+   police-radio-format: "&7*&9WPD-Radio&7*&8> &9</player> &7: &f</message>"
+   skinsrestorer-police-skins: false
+   skinsrestorer-skin-names:
+   - "police001"
+   - "PoliceOfficer"
+   - "Policee"
+   simplejail-jailed-message: false
+
+messages:
+   jailed-by-player: "&7[&9WPD&7] &fYou were caught and jailed by &9</player>&f."
+   jailed-player: "&7[&9WPD&7] &fYou jailed &9</player>&f."
+   teleported-close-to-player: "&7[&9WPD&7] &fYou were teleported a couple hundred blocks from the player."
+   inventory-full-baton: "&7[&9WPD&7] &fCouldn't give you the police baton because your inventory is full."
+   released-by-player: "&7[&9WPD&7] &fYou have been released from jail by &9</player>&f."
+   released-player: "&7[&9WPD&7] &fYou have released &9</player> &ffrom jail."
+   player-not-jailed: "&7[&9WPD&7] &fThat player is not jailed."
+   player-already-jailed: "&7[&9WPD&7] &fThat player is already jailed."
+   radio-toggled: "&7[&9WPD&7] &fYou have toggled radio chatting &9</status>&f."
+   duty-toggled: "&7[&9WPD&7] &fYou are now &9</status> &fduty."
+   cannot-jail-officer: "&7[&9WPD&7] &fYou cannot jail another police officer!"
+   confiscated-items: "&7[&9WPD&7] &fYou confiscated items: </items>"
+   player-confiscated-items: "&7[&9WPD&7] &9</player> &fconfiscated items: </items>"
+   invalid-player: "&7[&9WPD&7] &fInvalid player name!"
+   no-permission: "&7[&9WPD&7] &fYou don't have permission to use that command!"
+   incidents: "&7[&9WPD&7] &fThat player has &9</amount> &fincidents."
+   invalid-usage: "&7[&9WPD&7] &fInvalid usage. Use &9</usage>&f."
+   no-safe-location: "&7[&9WPD&7] &fCouldn't find a safe location to teleport to. Try to use the command again."
+   teleported-near: "&7[&9WPD&7] &fYou have teleported a couple hundred blocks away from &9</player>&f!"
+   reloaded-config: "&7[&9WPD&7] &fSuccessfully reloaded the &9config.yml&f!"
+   already-rank: "&7[&9WPD&7] &9</player> &fis already &9</rank>&f!"
+   player-promoted: "&7[&9WPD&7] &9</player> &fwas promoted to &9</rank>&f!"
+   got-promoted: "&7[&9WPD&7] &fYou have been promoted to &9</rank>&f. Congratulations!"
+   player-demoted: "&7[&9WPD&7] &9</player> &fwas demoted to a citizen!"
+   got-demoted: "&7[&9WPD&7] &fYou have been demoted to a citizen!"
+   already-citizen: "&7[&9WPD&7] &9</player> &fis already a citizen!"
+   
+# Commands that are executed by Console when a player gets jailed
+# </player> will be the player name of the jailed player
+# </jailer> will be the player name of the jailer
+jailed-commands:
+   - brc cast &9</player> &fwas jailed by &9</jailer>
+
+police-baton:
+   name: "&9&lPolice Baton"
+   lore:
+   - "&7A police officer's baton"
+   - "&8Provided by the Government"
+
+# The vanilla item names that get confiscated from players
+# that get jailed by a police officer
+drug-items:
+   - sugar
+   
+# Options for the /policesay command
+# </message> will be the message of the announcement
+# </announcer> will be the name of the player that used the command
+policesay-options:
+   format: "&8&k:&r &9&lPolice Announcement&r &8&k:&r &f</message>"
