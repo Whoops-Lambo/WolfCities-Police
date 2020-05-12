@@ -1,0 +1,29 @@
+main: me.pixelmania.wolfpolice.main.Core
+name: WolfPolice
+version: 1.0.1c
+author: PixelMania
+
+api-version: 1.13
+
+depend: [SimpleJail]
+softdepend: [SkinsRestorer]
+
+commands:
+   police:
+      usage: /<command> tp <player>
+   additems:
+      usage: /<command>
+   getbaton:
+      usage: /<command>
+   release:
+      usage: /<command> <player>
+   pc:
+      usage: |
+         usage: /<command> <message>
+         usage: /<command> toggle
+   duty:
+      usage: /<command>
+   incidents:
+      usage: /<command> <player>
+   wpd:
+      usage: /<command>
