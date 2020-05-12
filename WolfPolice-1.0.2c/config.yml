@@ -78,4 +78,4 @@ drug-items:
 # </message> will be the message of the announcement
 # </announcer> will be the name of the player that used the command
 policesay-options:
-   format: "&8&k:&r &0[&9&lPolice&0] &7> &r &f</message>"
+   format: "&8&k:&r &0[&9&lPolice&0]&3 </message>"
